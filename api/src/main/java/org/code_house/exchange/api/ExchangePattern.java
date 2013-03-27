@@ -20,7 +20,7 @@ package org.code_house.exchange.api;
  * 
  * TODO Verify if it's properly ported, ie IN/OUT/FAULT are mapped properly.
  */
-public enum ExchangePatter {
+public enum ExchangePattern {
 
     InOnly (true, false, false, "http://www.w3.org/ns/wsdl/in-only"),
     InOptionalOut ("http://www.w3.org/ns/wsdl/in-optional-out"),
@@ -36,19 +36,19 @@ public enum ExchangePatter {
     private final boolean hasFault;
     private final String wsdlSpecUri;
 
-    private ExchangePatter(String wsdlSpecUri) {
+    private ExchangePattern(String wsdlSpecUri) {
         this(true, wsdlSpecUri);
     }
 
-    private ExchangePatter(boolean hasIn, String wsdlSpecUri) {
+    private ExchangePattern(boolean hasIn, String wsdlSpecUri) {
         this(hasIn, true, wsdlSpecUri);
     }
 
-    private ExchangePatter(boolean hasIn, boolean hasOut, String wsdlSpecUri) {
+    private ExchangePattern(boolean hasIn, boolean hasOut, String wsdlSpecUri) {
         this(hasIn, hasOut, true, wsdlSpecUri);
     }
 
-    private ExchangePatter(boolean hasIn, boolean hasOut, boolean hasFault, String wsdlSpecUri) {
+    private ExchangePattern(boolean hasIn, boolean hasOut, boolean hasFault, String wsdlSpecUri) {
         this.hasIn = hasIn;
         this.hasOut = hasOut;
         this.hasFault = hasFault;
