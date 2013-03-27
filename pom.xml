@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ - Copyright (C) 2013 Code-House, Lukasz Dywicki.
+ -
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -
+ -     http://www.apache.org/licenses/LICENSE-2.0
+ -
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.code-house</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.6.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.code-house</groupId>
+    <artifactId>exchange</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Exchange :: Parent</name>
+    <packaging>pom</packaging>
+
+    <description>
+        Simple exchange API.
+    </description>
+
+    <modules>
+        <module>api</module>
+        <!--module>core</module-->
+    </modules>
+
+    <scm>
+        <connection>scm:git:https://github.com/Code-House/exchange.git</connection>
+        <developerConnection>scm:git:ssh://git.code-house.org/CH/exchange.git</developerConnection>
+        <url>http://github.com/Code-House/exchange</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.code-house.bus</groupId>
+                <artifactId>api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.code-house.bus</groupId>
+                <artifactId>core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
